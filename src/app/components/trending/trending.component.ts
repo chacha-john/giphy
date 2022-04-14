@@ -10,27 +10,24 @@ import { TrendsService } from 'src/app/services/trends.service';
 })
 export class TrendingComponent implements OnInit {
 
-  gif!:Trends
+  gifs:any = []
 
-  constructor(private trendsService:TrendsService) { }
-
-  getGifs():Observable<Trends>{
-    this.trendsService.trendingGifs()
-    .subscribe((res:any)=>{
-      console.log("data",res)
-    },
-    (err)=>{
-      console.log(err)
-    })
-
+  constructor(public trendsService:TrendsService) {
+    // trendsService.trendingGifs()
+    console.log(trendsService.trendingGifs());
+    
+    
   }
 
+
+
+
   ngOnInit(): void {    
-    this.trendsService.trendingGifs().subscribe(
-      (res)=>{this.gif = res},
-      (err)=>{console.log(err);
-      }
-    )
+    // this.trendsService.trendingGifs().subscribe(
+    //   (res)=>{this.gif = res},
+    //   (err)=>{console.log(err);
+    //   }
+    // )
   }
 
 }
