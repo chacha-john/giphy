@@ -1,0 +1,26 @@
+nav{
+    display: flex;
+    margin-top: 2%;
+}
+#brand{
+    width: 10%;
+}
+#links{
+    width: 50%;
+}
+#upload, #user{
+    width: 20%;
+}
+nav div{
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.link{
+    margin: 0 4%
+}
+button{
+    margin: 0 4%;
+}
