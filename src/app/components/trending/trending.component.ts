@@ -12,7 +12,7 @@ export class TrendingComponent implements OnInit {
 
   gifs:any = []
 
-  constructor(public trendsService:GiphyService) { }
+  constructor(private trendsService:GiphyService) { }
     
   ngOnInit(): void { 
     this.trendsService.trendingGifs().subscribe((res)=>{

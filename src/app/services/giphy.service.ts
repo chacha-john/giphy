@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 
@@ -12,13 +13,13 @@ export class GiphyService {
 
   constructor(private http:HttpClient) { }
 
-  trendingGifs(){
+  trendingGifs():Observable<any>{
     return this.http.get<any>(`${environment.trending}?api_key=${environment.api_key}&limit=10`)
       
   }
 
-  searchGifs(){
-    return this.http.get<any>(`${environment.search}?api_key=${environment.api_key}?q=artists`)
-  }
+  // searchGifs(){
+  //   return this.http.get<any>(`${environment.search}?api_key=${environment.api_key}?q=artists`)
+  // }
 
 }

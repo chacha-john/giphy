@@ -10,14 +10,14 @@ export class ArtistsComponent implements OnInit {
 
   artists:any[] = []
 
-  constructor(public artistsService:GiphyService) { }
+  constructor(private artistsService:GiphyService) { }
 
   ngOnInit(): void {
-    this.artistsService.searchGifs().subscribe((res)=>{
-      this.artists = res.data
-      console.log(this.artists);
+    // this.artistsService.searchGifs().subscribe((res)=>{
+    //   this.artists = res.data
+    //   console.log(this.artists);
       
-    })
+    // })
   }
 
 }
