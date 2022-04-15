@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Trends } from 'src/app/classes/trends';
-import { TrendsService } from 'src/app/services/trends.service';
+import { GiphyService } from 'src/app/services/giphy.service';
 
 @Component({
   selector: 'app-trending',
@@ -12,7 +12,7 @@ export class TrendingComponent implements OnInit {
 
   gifs:any = []
 
-  constructor(public trendsService:TrendsService) { }
+  constructor(public trendsService:GiphyService) { }
     
   ngOnInit(): void { 
     this.trendsService.trendingGifs().subscribe((res)=>{

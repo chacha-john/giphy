@@ -7,21 +7,25 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { TrendingComponent } from './components/trending/trending.component';
-import { TrendsService } from './services/trends.service';
+import { GiphyService } from './services/giphy.service';
+import { ArtistsComponent } from './components/artists/artists.component';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     BannerComponent,
-    TrendingComponent
+    TrendingComponent,
+    ArtistsComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [TrendsService],
+  providers: [GiphyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

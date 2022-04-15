@@ -6,14 +6,19 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class TrendsService {
+export class GiphyService {
 
 
 
   constructor(private http:HttpClient) { }
 
   trendingGifs(){
-    return this.http.get<any>(`${environment.url}?api_key=${environment.api_key}&limit=10`)
+    return this.http.get<any>(`${environment.trending}?api_key=${environment.api_key}&limit=10`)
       
-    }
+  }
+
+  searchGifs(){
+    return this.http.get<any>(`${environment.search}?api_key=${environment.api_key}?q=artists`)
+  }
+
 }
