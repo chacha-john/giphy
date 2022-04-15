@@ -18,7 +18,7 @@ import { SearchComponent } from './components/search/search.component';
     BannerComponent,
     TrendingComponent,
     ArtistsComponent,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,10 +4,6 @@
 .beige{
     background-color: yellow;
 }
-input{
-    border-radius: 0;
-    height: 60px;
-}
 .blue, .beige{
     height: 60px;
 }
