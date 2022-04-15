@@ -16,8 +16,10 @@ export class TrendingComponent implements OnInit {
     
   ngOnInit(): void { 
     this.trendsService.trendingGifs().subscribe((res)=>{
-      this.gifs = res.data;      
+      this.gifs = res.data;
     });
+    
+    
        
     
   }

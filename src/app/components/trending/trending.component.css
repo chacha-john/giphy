@@ -1,0 +1,12 @@
+div#trendingcontainer{
+    display: flex;
+    flex-direction: row;
+}
+img{
+    width: auto;
+    margin: 0 2%;
+    height: 200px;
+}
+ul li{
+    display: flex;
+}

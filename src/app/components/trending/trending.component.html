@@ -1,11 +1,10 @@
 <div class="trending">
   <i class="fa-solid fa-arrow-trend-up"></i>
   <h3 onclick="getGifs()">Trending</h3>
-  <ul>
-    <div *ngFor="let gif of gifs">
-        <!-- {{gif.}} -->
-    </div>
-  </ul>
-
+  <div id="trendingcontainer">
+      <ul id="trendingcontainer" *ngFor="let gif of gifs">
+        <li><img src="{{gif.images.original.url}}" alt=""></li>
+    </ul>
+  </div>
 
 </div>
