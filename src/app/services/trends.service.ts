@@ -13,12 +13,7 @@ export class TrendsService {
   constructor(private http:HttpClient) { }
 
   trendingGifs(){
-    this.http.get<any>(`${environment.url}?api_key=${environment.api_key}&limit=10`).subscribe(res=>{
-      console.log(res.data);
-      return(res.data)
+    return this.http.get<any>(`${environment.url}?api_key=${environment.api_key}&limit=10`)
       
-      
-    },(err)=>{return err;
-    })
-  }
+    }
 }

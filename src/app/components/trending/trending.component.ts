@@ -12,22 +12,14 @@ export class TrendingComponent implements OnInit {
 
   gifs:any = []
 
-  constructor(public trendsService:TrendsService) {
-    // trendsService.trendingGifs()
-    console.log(trendsService.trendingGifs());
+  constructor(public trendsService:TrendsService) { }
     
+  ngOnInit(): void { 
+    this.trendsService.trendingGifs().subscribe((res)=>{
+      this.gifs = res.data;      
+    });
+       
     
-  }
-
-
-
-
-  ngOnInit(): void {    
-    // this.trendsService.trendingGifs().subscribe(
-    //   (res)=>{this.gif = res},
-    //   (err)=>{console.log(err);
-    //   }
-    // )
   }
 
 }
