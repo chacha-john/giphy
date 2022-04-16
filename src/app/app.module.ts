@@ -10,6 +10,7 @@ import { TrendingComponent } from './components/trending/trending.component';
 import { GiphyService } from './services/giphy.service';
 import { ArtistsComponent } from './components/artists/artists.component';
 import { SearchComponent } from './components/search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SearchComponent } from './components/search/search.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [GiphyService],
   bootstrap: [AppComponent]

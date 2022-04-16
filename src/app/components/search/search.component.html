@@ -1,6 +1,6 @@
 <div class="search mt-4">
-    <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search  all the GIFs and stickers" aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <form #searchForm="ngForm" (ngSubmit)="onSubmit(searchForm)" class="d-flex">
+        <input ngModel type="search" name="search" id="search" placeholder="Search  all the GIFs and stickers" aria-label="Search" class="form-control me-2">
+        <button [disabled]="!searchForm.form.valid" class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
 </div>
