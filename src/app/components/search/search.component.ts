@@ -9,13 +9,14 @@ import { GiphyService } from 'src/app/services/giphy.service';
 })
 export class SearchComponent implements OnInit {
 
-  res:any = []
+  gifs: any =[]
   constructor(private searchService:GiphyService) { }
 
   onSubmit(term:NgForm){
     let searched = term.value.search
-    this.res = this.searchService.searchGifs(searched)
-    console.log(this.res.data);
+    this.searchService.searchGifs(searched).subscribe((res)=>{
+      this.gifs = res.data
+    })
     
   }
 

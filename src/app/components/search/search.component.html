@@ -4,3 +4,11 @@
         <button [disabled]="!searchForm.form.valid" class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
 </div>
+<div class="searched">
+    <div id="search">
+        <ul *ngFor="let gif of gifs">
+          <li><img src="{{gif.images.original.url}}" alt=""></li>
+      </ul>
+    </div>
+  
+  </div>

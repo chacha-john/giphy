@@ -2,3 +2,19 @@ input{
     border-radius: 0;
     height: 60px;
 }
+div#search{
+    display: flex;
+}
+img{
+    height: 200px;
+    border-radius: 5px;
+}
+div h3{
+    display: inline;margin: 0 2%;
+}
+ul{
+    list-style-type: none;
+}
+.searched{
+    overflow-x: hidden;
+}

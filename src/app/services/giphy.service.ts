@@ -19,7 +19,7 @@ export class GiphyService {
   }
 
   searchGifs(term:string):Observable<any>{
-    return this.http.get<any>(`${environment.search}?api_key=${environment.api_key}?q=${term}`)
+    return this.http.get<any>(`${environment.search}?api_key=${environment.api_key}&q=${term}&limit=10&lang=en`)
   }
 
 }

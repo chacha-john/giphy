@@ -4,7 +4,7 @@
 
 export const environment = {
   trending: "https://api.giphy.com/v1/gifs/trending",
-  search: "https://api.giphy.com/v1/gifs/trending",
+  search: "https://api.giphy.com/v1/gifs/search",
   api_key: "tyn2hjxX1w9OJu3M8XW9vbin6XVoDzVO",
   production: false
 };
